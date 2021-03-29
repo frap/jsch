@@ -1,0 +1,12 @@
+#_(ns deps.edn
+     (:require [clojure.tools.deps.alpha.repl :refer [add-libs]]))
+{:paths [ "src" ]
+ :deps
+ #_(add-libs)
+ {org.clojure/clojure {:mvn/version "1.10.1"}
+  ring/ring           {:mvn/version "RELEASE"}
+  ring/ring-defaults  {:mvn/version "0.3.2"}
+  clj-commons/clj-ssh {:mvn/version  "0.5.15"}
+  ;;frap/cljdev        {:local/root "../../bb/cljdev"}
+  }
+ :aliases {:repl {:main-opts  ["-m" "cljdev.repl"]}}}
